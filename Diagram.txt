@@ -51,3 +51,10 @@ class Triangle{
  +string(Area)
  +string(Perimeter)
 }
+
+Shape <|-- Circle
+Shape <|-- EquilateralTriangle
+Shape <|-- Rectangle
+Shape <|-- RegularPentagon
+Shape <|-- Square
+Shape <|-- Triangle
