@@ -26,7 +26,6 @@ namespace Codecool.Geometry.Shapes
 
         /// <inheritdoc />
         public override double Area => PI*r*r;
-        Math.
         /// <inheritdoc />
         public override double Perimeter => 2*PI*r;
     }
