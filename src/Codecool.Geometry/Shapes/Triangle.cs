@@ -6,7 +6,20 @@ namespace Codecool.Geometry.Shapes
     ///     Triangle implementation class
     /// </summary>
     public class Triangle : Shape
-    {
+
+    { 
+        private readonly double a;
+        private readonly double b;
+        private readonly double c;
+        private readonly double h;
+        
+        public Triangle(double a, double b, double c, double h)
+        {
+            this.a = a;
+            this.b = b;
+            this.c = c;
+            this.h = h;
+        }
         /// <summary>
         ///     Gets formula for the area of the triangle as a string.
         /// </summary>
@@ -18,9 +31,9 @@ namespace Codecool.Geometry.Shapes
         public new static string PerimeterFormula => throw new NotImplementedException();
 
         /// <inheritdoc/>
-        public override double Perimeter => throw new NotImplementedException();
+        public override double Perimeter => a + b + c;
 
         /// <inheritdoc />
-        public override double Area => throw new NotImplementedException();
+        public override double Area => 0,5 * a * h;
     }
 }
