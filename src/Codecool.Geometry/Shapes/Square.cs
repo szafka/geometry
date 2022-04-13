@@ -10,10 +10,9 @@ namespace Codecool.Geometry.Shapes
         private readonly double a;
         private readonly double b;
 
-        public Square(double a, double b)
+        public Square(double a) : base(a, a)
          {
-             this.a = a;
-             this.b = a;
+
          }
     {
         /// <summary>
