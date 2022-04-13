@@ -8,10 +8,8 @@ namespace Codecool.Geometry.Shapes
     public class Circle : Shape
     {
         private readonly double r;
-        public const double PI = 3.1415926535897931;
         public Circle (double r)
         {
-            this.PI = PI;
             this.r = r;
         }
         /// <summary>
@@ -25,8 +23,8 @@ namespace Codecool.Geometry.Shapes
         public new static string PerimeterFormula => Console.WriteLine("Perimeter = 2*PI*r");
 
         /// <inheritdoc />
-        public override double Area => PI*r*r;
+        public override double Area => Math.PI *r*r;
         /// <inheritdoc />
-        public override double Perimeter => 2*PI*r;
+        public override double Perimeter => 2*Math.PI *r;
     }
 } 
