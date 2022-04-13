@@ -1,0 +1,53 @@
+@startuml
+class Shape{
+ +double Area()
+ +double Perimeter()
+ +string(Area)
+ +string(Perimeter)
+}
+class Circle{
+ -double r
+ +double PI
+ +double Area()
+ +double Perimeter()
+ +string(Area)
+ +string(Perimeter)
+}
+class EquilateralTriangle{
+ -double a
+ -double h
+ +string(Area)
+ +string(Perimeter)
+}
+class Rectangle{
+ -double a
+ #double b
+ +double Area()
+ +double Perimeter()
+ +string(Area)
+ +string(Perimeter)
+}
+class RegularPentagon{
+ -double a
+ -double n
+ +double Area()
+ +double Perimeter()
+ +string(Area)
+ +string(Perimeter)
+}
+class Square{
+ -double a
+ -double b
+ +string(Area)
+ +string(Perimeter)
+}
+class Triangle{
+ -double a
+ -double b
+ -double c
+ -double h
+ +double Area()
+ +double Perimeter()
+ +string(Area)
+ +string(Perimeter)
+}
