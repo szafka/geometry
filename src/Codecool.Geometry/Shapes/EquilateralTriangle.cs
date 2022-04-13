@@ -8,10 +8,9 @@ namespace Codecool.Geometry.Shapes
     public class EquilateralTriangle : Triangle
     {
         private readonly double a;
-        private readonly double b;
-        private readonly double c;
+
         private readonly double h;
-        public EquilateralTriangle(double a, double b, double c, double h)
+        public EquilateralTriangle(double a, double h) : base(a, a, a, h)
         {
             this.a = a;
             this.b = a;
