@@ -8,7 +8,7 @@ namespace Codecool.Geometry.Shapes
     public class Rectangle : Shape
     {
         private readonly double a;
-        private readonly double b;
+        protected readonly double b;
         
         public Rectangle(double a, double b)
         {
