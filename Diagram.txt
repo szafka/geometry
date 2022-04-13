@@ -2,44 +2,41 @@
 class Shape{
  +double Area()
  +double Perimeter()
- +string(Area)
- +string(Perimeter)
+ +string AreaFormula()
+ +string PerimeterFormula()
 }
 class Circle{
  -double r
- +double PI
  +double Area()
  +double Perimeter()
- +string(Area)
- +string(Perimeter)
+ +string AreaFormula()
+ +string PerimeterFormula()
 }
 class EquilateralTriangle{
  -double a
  -double h
- +string(Area)
- +string(Perimeter)
+ +string AreaFormula()
+ +string PerimeterFormula()
 }
 class Rectangle{
  -double a
  #double b
  +double Area()
  +double Perimeter()
- +string(Area)
- +string(Perimeter)
+ +string AreaFormula()
+ +string PerimeterFormula()
 }
 class RegularPentagon{
  -double a
- -double n
  +double Area()
  +double Perimeter()
- +string(Area)
- +string(Perimeter)
+ +string AreaFormula()
+ +string PerimeterFormula()
 }
 class Square{
  -double a
- -double b
- +string(Area)
- +string(Perimeter)
+ +string AreaFormula()
+ +string PerimeterFormula()
 }
 class Triangle{
  -double a
@@ -48,13 +45,13 @@ class Triangle{
  -double h
  +double Area()
  +double Perimeter()
- +string(Area)
- +string(Perimeter)
+ +string AreaFormula()
+ +string PerimeterFormula()
 }
 
 Shape <|-- Circle
-Shape <|-- EquilateralTriangle
+Triangle <|-- EquilateralTriangle
 Shape <|-- Rectangle
 Shape <|-- RegularPentagon
-Shape <|-- Square
+Rectangle <|-- Square
 Shape <|-- Triangle

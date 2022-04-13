@@ -6,7 +6,7 @@ namespace Codecool.Geometry.Shapes
     ///     Square implementation class
     /// </summary>
     public class Square : Rectangle
-
+    {
         private readonly double a;
         private readonly double b;
 
@@ -14,7 +14,6 @@ namespace Codecool.Geometry.Shapes
          {
 
          }
-    {
         /// <summary>
         ///     Gets formula for the area of the rectangle as a string.
         /// </summary>
