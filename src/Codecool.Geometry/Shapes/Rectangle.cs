@@ -7,20 +7,28 @@ namespace Codecool.Geometry.Shapes
     /// </summary>
     public class Rectangle : Shape
     {
+        private readonly double a;
+        private readonly double b;
+        
+        public Rectangle(double a, double b)
+        {
+            this.a = a;
+            this.b = b;
+        }
         /// <summary>
         ///     Gets formula for the area of the rectangle as a string.
         /// </summary>
-        public new static string AreaFormula => throw new NotImplementedException();
+        public new static string AreaFormula => Console.WriteLine("Area = a * b");
 
         /// <summary>
         ///     Gets formula for the perimeter of the rectangle as a string.
         /// </summary>
-        public new static string PerimeterFormula => throw new NotImplementedException();
+        public new static string PerimeterFormula => Console.WriteLine("Perimenter = 2a * 2b");
 
         /// <inheritdoc />
-        public override double Area => throw new NotImplementedException();
+        public override double Area => a * b;
 
         /// <inheritdoc />
-        public override double Perimeter => throw new NotImplementedException();
+        public override double Perimeter => 2*a * 2*b;
     }
 }
