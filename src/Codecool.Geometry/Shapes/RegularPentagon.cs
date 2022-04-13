@@ -27,7 +27,9 @@ namespace Codecool.Geometry.Shapes
         public new static string PerimeterFormula => Console.WriteLine("Perimental = 5*a");
 
         /// <inheritdoc/>
-        public override double Area => (n/2)*(((a/2)*1/(Math.SIN(Math.PI/n))^2)*Math.SIN(2*Math.PI/n);
+        public override double Area => (Math.Sqrt(25 + 10*Math.Sqrt(5)))*Math.Pow(a, 2)/4
+            
+            //(n/2)*(((a/2)*1/(Math.SIN(Math.PI/n))^2)*Math.SIN(2*Math.PI/n);
 
         /// <inheritdoc/>
         public override double Perimeter => 5*a;
