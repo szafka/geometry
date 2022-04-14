@@ -17,11 +17,11 @@ namespace Codecool.Geometry.Shapes
         /// <summary>
         ///     Gets formula for the area of the rectangle as a string.
         /// </summary>
-        public new static string AreaFormula => Console.WriteLine("Area = a^2");
+        public new static string AreaFormula => "Area = a^2";
 
         /// <summary>
         ///     Gets formula for the perimeter of the rectangle as a string.
         /// </summary>
-        public new static string PerimeterFormula => Console.WriteLine("Perimenter = 4*a");
+        public new static string PerimeterFormula => "Perimenter = 4*a";
     }
 }

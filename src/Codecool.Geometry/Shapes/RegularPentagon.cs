@@ -17,12 +17,12 @@ namespace Codecool.Geometry.Shapes
         /// <summary>
         ///     Gets formula for the area of the pentagon as a string.
         /// </summary>
-        public new static string AreaFormula => Console.WriteLine("(n/2)*((a/2)*cosec(PI/n)^2)*sin(2PI/n)");
+        public new static string AreaFormula => "(n/2)*((a/2)*cosec(PI/n)^2)*sin(2PI/n)";
 
         /// <summary>
         ///     Gets formula for the perimeter of the pentagon as a string.
         /// </summary>
-        public new static string PerimeterFormula => Console.WriteLine("Perimental = 5*a");
+        public new static string PerimeterFormula => "Perimental = 5*a";
 
         /// <inheritdoc/>
         public override double Area => (Math.Sqrt(25 + 10*Math.Sqrt(5)))*Math.Pow(a, 2)/4;

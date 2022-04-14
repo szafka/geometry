@@ -20,11 +20,11 @@ namespace Codecool.Geometry.Shapes
         /// <summary>
         ///     Gets formula for the area of the triangle as a string.
         /// </summary>
-        public new static string AreaFormula => Console.WriteLine("0,5 * a * h");
+        public new static string AreaFormula => "0.5 * a * h";
 
         /// <summary>
         ///     Gets formula for the perimeter of the triangle as a string.
         /// </summary>
-        public new static string PerimeterFormula => Console.WriteLine("3*a");
+        public new static string PerimeterFormula => "3*a";
     }
 }

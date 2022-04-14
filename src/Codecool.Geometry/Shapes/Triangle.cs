@@ -22,17 +22,17 @@ namespace Codecool.Geometry.Shapes
         /// <summary>
         ///     Gets formula for the area of the triangle as a string.
         /// </summary>
-        public new static string AreaFormula => Console.WriteLine("Area = 0,5 * a * h");
+        public new static string AreaFormula => "Area = 0,5 * a * h";
 
         /// <summary>
         ///     Gets formula for the perimeter of the triangle as a string.
         /// </summary>
-        public new static string PerimeterFormula => Console.WriteLine("Perimeter = a + b + c");
+        public new static string PerimeterFormula => "Perimeter = a + b + c";
 
         /// <inheritdoc/>
         public override double Perimeter => a + b + c;
 
         /// <inheritdoc />
-        public override double Area => 0,5 * a * h;
+        public override double Area => 0.5f * a * h;
     }
 }
