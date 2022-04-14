@@ -6,23 +6,21 @@ namespace Codecool.Geometry.Shapes
     ///     Triangle implementation class
     /// </summary>
     public class Triangle : Shape
-    { 
+    {
         private readonly double a;
         private readonly double b;
         private readonly double c;
-        private readonly double h;
-        
-        public Triangle(double a, double b, double c, double h)
+
+        public Triangle(double a, double b, double c)
         {
             this.a = a;
             this.b = b;
             this.c = c;
-            this.h = h;
         }
         /// <summary>
         ///     Gets formula for the area of the triangle as a string.
         /// </summary>
-        public new static string AreaFormula => "Area = 0,5 * a * h";
+        public new static string AreaFormula => "Area = sqrt(s×(s-a)×(s-b)×(s-c))";
 
         /// <summary>
         ///     Gets formula for the perimeter of the triangle as a string.
@@ -33,6 +31,13 @@ namespace Codecool.Geometry.Shapes
         public override double Perimeter => a + b + c;
 
         /// <inheritdoc />
-        public override double Area => 0.5f * a * h;
+        public override double Area
+        {
+            get 
+            { 
+                double s = Perimeter / 2;
+                return Math.Sqrt(s * (s - a) * (s - b) * (s - c));
+            }
+        }
     }
 }
