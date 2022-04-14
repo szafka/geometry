@@ -13,8 +13,6 @@ namespace Codecool.Geometry.Shapes
         public EquilateralTriangle(double a, double h) : base(a, a, a, h)
         {
             this.a = a;
-            this.b = a;
-            this.c = a;
             this.h = h;
         }
         /// <summary>
