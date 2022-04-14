@@ -7,7 +7,7 @@ namespace Codecool.Geometry.Shapes
     /// </summary>
     public class Rectangle : Shape
     {
-        private readonly double a;
+        protected readonly double a;
         protected readonly double b;
         
         public Rectangle(double a, double b)
@@ -30,5 +30,9 @@ namespace Codecool.Geometry.Shapes
 
         /// <inheritdoc />
         public override double Perimeter => 2*a * 2*b;
+        public override string ToString()
+        {
+            return String.Format("Rectangle, a = {0}, b = {1}",a,b);
+        }
     }
 }

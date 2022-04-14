@@ -7,9 +7,9 @@ namespace Codecool.Geometry.Shapes
     /// </summary>
     public class Triangle : Shape
     {
-        private readonly double a;
-        private readonly double b;
-        private readonly double c;
+        protected readonly double a;
+        protected readonly double b;
+        protected readonly double c;
 
         public Triangle(double a, double b, double c)
         {
@@ -39,5 +39,9 @@ namespace Codecool.Geometry.Shapes
                 return Math.Sqrt(s * (s - a) * (s - b) * (s - c));
             }
         }
-    }
+        public override string ToString()
+        {
+            return String.Format("Square, a = {0}" + a);
+        }
+}
 }

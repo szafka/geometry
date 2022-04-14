@@ -8,7 +8,7 @@ namespace Codecool.Geometry.Shapes
     public class Circle : Shape
     {
         private readonly double r;
-        public Circle (double r)
+        public Circle(double r)
         {
             this.r = r;
         }
@@ -26,5 +26,10 @@ namespace Codecool.Geometry.Shapes
         public override double Area => Math.PI *r*r;
         /// <inheritdoc />
         public override double Perimeter => 2*Math.PI *r;
+
+        public override string ToString()
+        {
+            return String.Format("Circle, r = {0}", r);
+        }
     }
 } 

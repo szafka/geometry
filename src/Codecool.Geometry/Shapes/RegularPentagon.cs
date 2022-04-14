@@ -31,5 +31,9 @@ namespace Codecool.Geometry.Shapes
 
         /// <inheritdoc/>
         public override double Perimeter => 5*a;
+        public override string ToString()
+        {
+            return String.Format("Pentagon, a = {0}" + a);
+        }
     }
 }
