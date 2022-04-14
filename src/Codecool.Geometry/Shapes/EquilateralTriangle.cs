@@ -7,22 +7,19 @@ namespace Codecool.Geometry.Shapes
     /// </summary>
     public class EquilateralTriangle : Triangle
     {
-        private readonly double a;
-
-        private readonly double h;
-        public EquilateralTriangle(double a, double h) : base(a, a, a, h)
-        {
-            this.a = a;
-            this.h = h;
-        }
+        public EquilateralTriangle(double a) : base(a, a, a){}
         /// <summary>
         ///     Gets formula for the area of the triangle as a string.
         /// </summary>
-        public new static string AreaFormula => "0.5 * a * h";
+        public new static string AreaFormula => "a×a×sqrt(3)/4";
 
         /// <summary>
         ///     Gets formula for the perimeter of the triangle as a string.
         /// </summary>
         public new static string PerimeterFormula => "3*a";
+        public override string ToString()
+        {
+            return String.Format("Equilateral Triangle, a = {0}" + a);
+        }
     }
 }
