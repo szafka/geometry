@@ -10,16 +10,23 @@ namespace Codecool.Geometry.Shapes
         {
         shapeList.Add(shape);
         }
-        
-        
-        
-        
-        /*public string GeometricName { get; }
-        public double GeometricArea { get; }
-        public double GeoAreaFormula { get; }
-        public double GeometricParameter { get; }
-        public double GeoParaFormula { get; }
-        */
-    }
+        public Shape getLargestShapeByPerimeter()
+        {
+            Shape largestShape = null;
+            foreach (Shape shape in shapeList)
+            {
+                if (largestShape == null)
+                {
+                    largestShape = shape;
+                }
+                else if(largestShape.Perimeter < shape.Perimeter)
+                {
+                    largestShape = shape;
+                }
+            }
+            return largestShape;
+        }
 
+
+    }
 }
