@@ -8,14 +8,14 @@ namespace Codecool.Geometry
     /// </summary>
     public static class Program
     {
+        static ShapeCollection shapeCollection = new ShapeCollection();
         /// <summary>
         ///     This is the entry point of your program.
         /// </summary>
         /// <param name="args">Command line arguments.</param>
         public static void Main(string[] args)
         {
-            
-            ShapeCollection shapeCollection = new ShapeCollection();
+           /*
             Triangle triangle = new Triangle(3.0, 3.0, 3.0);
             Square square = new Square(4.0);
             Rectangle rectangle = new Rectangle(4.0, 120.0);
@@ -23,7 +23,7 @@ namespace Codecool.Geometry
             shapeCollection.addShape(triangle);
             shapeCollection.addShape(square);
             shapeCollection.addShape(rectangle);
-            
+            */
             
            
 
@@ -45,6 +45,7 @@ namespace Codecool.Geometry
                 switch (option)
                 {
                     case 1:
+                        addShape();
                         // TODO Add new shape
                         break;
                     case 2:
@@ -78,7 +79,7 @@ namespace Codecool.Geometry
             Console.WriteLine("4 : Regular Pentagon");
             Console.WriteLine("5 : Square");
             Console.WriteLine("6 : Rectangle");
-            Console.WriteLine("0 : Exit");
+            Console.WriteLine("0 : Return");
             int option = Convert.ToInt32(Console.ReadLine());
             return option;
         }
@@ -91,7 +92,21 @@ namespace Codecool.Geometry
                     break;
             }
         }
-
+        private static void addShape()
+        {
+            switch (chooseShape())
+            {
+                case 1:
+                    shapeCollection.addShape(createCircle());
+                    break;
+            }
+        }
+        private static Circle createCircle()
+        {
+            Console.WriteLine("Podaj długość promienia r:");
+            double r = Double.Parse(Console.ReadLine());
+            return new Circle(r);
+        }
 
     }
 }
