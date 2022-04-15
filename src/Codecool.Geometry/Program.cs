@@ -60,6 +60,7 @@ namespace Codecool.Geometry
                         // TODO Show shape with the largest area
                         break;
                     case 5:
+                        showFormulas();
                         // TODO Show formulas
                         break;
                     case 0:
@@ -68,5 +69,29 @@ namespace Codecool.Geometry
                 }
             }
         }
+        private static int chooseShape()
+        {
+            Console.WriteLine("Choose shape:");
+            Console.WriteLine("1 : Circle");
+            Console.WriteLine("2 : Triangle");
+            Console.WriteLine("3 : EquilateralTriangle");
+            Console.WriteLine("4 : Regular Pentagon");
+            Console.WriteLine("5 : Square");
+            Console.WriteLine("6 : Rectangle");
+            Console.WriteLine("0 : Exit");
+            int option = Convert.ToInt32(Console.ReadLine());
+            return option;
+        }
+        private static void showFormulas()
+        {
+            switch(chooseShape())
+            {
+                case 1:
+                    Console.WriteLine(String.Format("Circle area formula: {0}, Circle perimeter formula: {1}",Circle.AreaFormula,Circle.PerimeterFormula));
+                    break;
+            }
+        }
+
+
     }
 }
