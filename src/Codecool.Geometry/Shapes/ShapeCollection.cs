@@ -12,19 +12,36 @@ namespace Codecool.Geometry.Shapes
         }
         public Shape getLargestShapeByPerimeter()
         {
-            Shape largestShape = null;
+            Shape largestShapeByPerimeter = null;
             foreach (Shape shape in shapeList)
             {
-                if (largestShape == null)
+                if (largestShapeByPerimeter == null)
                 {
-                    largestShape = shape;
+                    largestShapeByPerimeter = shape;
                 }
-                else if(largestShape.Perimeter < shape.Perimeter)
+                else if(largestShapeByPerimeter.Perimeter < shape.Perimeter)
                 {
-                    largestShape = shape;
+                    largestShapeByPerimeter = shape;
                 }
             }
-            return largestShape;
+            return largestShapeByPerimeter;
+        }
+        public Shape getLargestShapeByArea()
+        {
+            Shape largestShapeByArea = null;
+            foreach (Shape shape in shapeList)
+            {
+                if (largestShapeByArea == null)
+                {
+                    largestShapeByArea = shape;
+                }
+                else if (largestShapeByArea.Area < shape.Area)
+                {
+                    largestShapeByArea = shape;
+                }
+
+            }
+            return largestShapeByArea;
         }
 
 
