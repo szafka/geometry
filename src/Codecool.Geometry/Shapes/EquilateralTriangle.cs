@@ -19,7 +19,7 @@ namespace Codecool.Geometry.Shapes
         public new static string PerimeterFormula => "3*a";
         public override string ToString()
         {
-            return String.Format("Equilateral Triangle, a = {0}" + a);
+            return String.Format("Equilateral Triangle, a = {0}", a);
         }
     }
 }

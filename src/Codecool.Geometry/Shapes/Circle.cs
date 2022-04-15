@@ -15,12 +15,12 @@ namespace Codecool.Geometry.Shapes
         /// <summary>
         ///     Gets formula for the area of the circle as a string.
         /// </summary>
-        public new static string AreaFormula => "Area = PI * r^2";
+        public new static string AreaFormula => "PI * r^2";
 
         /// <summary>
         ///     Gets formula for the perimeter of the circle as a string.
         /// </summary>
-        public new static string PerimeterFormula => "Perimeter = 2*PI*r";
+        public new static string PerimeterFormula => "2*PI*r";
 
         /// <inheritdoc />
         public override double Area => Math.PI *r*r;

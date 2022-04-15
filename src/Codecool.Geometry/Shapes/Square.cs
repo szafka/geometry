@@ -11,15 +11,15 @@ namespace Codecool.Geometry.Shapes
         /// <summary>
         ///     Gets formula for the area of the rectangle as a string.
         /// </summary>
-        public new static string AreaFormula => "Area = a^2";
+        public new static string AreaFormula => "a^2";
 
         /// <summary>
         ///     Gets formula for the perimeter of the rectangle as a string.
         /// </summary>
-        public new static string PerimeterFormula => "Perimenter = 4*a";
+        public new static string PerimeterFormula => "4*a";
         public override string ToString()
         {
-            return String.Format("Square, a = {0}" + a);
+            return String.Format("Square, a = {0}", a);
         }
     }
 }

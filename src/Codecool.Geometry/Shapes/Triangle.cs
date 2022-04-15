@@ -20,12 +20,12 @@ namespace Codecool.Geometry.Shapes
         /// <summary>
         ///     Gets formula for the area of the triangle as a string.
         /// </summary>
-        public new static string AreaFormula => "Area = sqrt(s×(s-a)×(s-b)×(s-c))";
+        public new static string AreaFormula => "sqrt(s×(s-a)×(s-b)×(s-c))";
 
         /// <summary>
         ///     Gets formula for the perimeter of the triangle as a string.
         /// </summary>
-        public new static string PerimeterFormula => "Perimeter = a + b + c";
+        public new static string PerimeterFormula => "a + b + c";
 
         /// <inheritdoc/>
         public override double Perimeter => a + b + c;
@@ -41,7 +41,7 @@ namespace Codecool.Geometry.Shapes
         }
         public override string ToString()
         {
-            return String.Format("Square, a = {0}" + a);
+            return String.Format("Triangle, a = {0}", a);
         }
 }
 }

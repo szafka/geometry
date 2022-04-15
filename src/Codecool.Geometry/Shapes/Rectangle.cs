@@ -18,12 +18,12 @@ namespace Codecool.Geometry.Shapes
         /// <summary>
         ///     Gets formula for the area of the rectangle as a string.
         /// </summary>
-        public new static string AreaFormula => "Area = a * b";
+        public new static string AreaFormula => "a * b";
 
         /// <summary>
         ///     Gets formula for the perimeter of the rectangle as a string.
         /// </summary>
-        public new static string PerimeterFormula => "Perimenter = 2a * 2b";
+        public new static string PerimeterFormula => "2a * 2b";
 
         /// <inheritdoc />
         public override double Area => a * b;
