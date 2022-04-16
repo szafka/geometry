@@ -11,7 +11,7 @@ namespace Codecool.Geometry.Shapes
         /// <summary>
         ///     Gets formula for the area of the triangle as a string.
         /// </summary>
-        public new static string AreaFormula => "a×a×sqrt(3)/4";
+        public new static string AreaFormula => "a*a*sqrt(3)/4";
 
         /// <summary>
         ///     Gets formula for the perimeter of the triangle as a string.

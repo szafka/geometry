@@ -11,7 +11,7 @@ namespace Codecool.Geometry.Shapes
         /// <summary>
         ///     Gets formula for the area of the rectangle as a string.
         /// </summary>
-        public new static string AreaFormula => "a^2";
+        public new static string AreaFormula => "a * a";
 
         /// <summary>
         ///     Gets formula for the perimeter of the rectangle as a string.

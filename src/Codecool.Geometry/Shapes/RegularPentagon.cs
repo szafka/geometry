@@ -7,7 +7,7 @@ namespace Codecool.Geometry.Shapes
     /// </summary>
     public class RegularPentagon : Shape
     {
-        private readonly double a;
+        protected readonly double a;
 
         public RegularPentagon(double a)
         {
@@ -22,7 +22,7 @@ namespace Codecool.Geometry.Shapes
         /// <summary>
         ///     Gets formula for the perimeter of the pentagon as a string.
         /// </summary>
-        public new static string PerimeterFormula => "Perimental = 5*a";
+        public new static string PerimeterFormula => "5*a";
 
         /// <inheritdoc/>
         public override double Area => (Math.Sqrt(25 + 10*Math.Sqrt(5)))*Math.Pow(a, 2)/4;
@@ -33,7 +33,7 @@ namespace Codecool.Geometry.Shapes
         public override double Perimeter => 5*a;
         public override string ToString()
         {
-            return String.Format("Pentagon, a = {0}" + a);
+            return String.Format("Pentagon, a = {0}", a);
         }
     }
 }
