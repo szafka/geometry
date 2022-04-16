@@ -15,17 +15,17 @@ namespace Codecool.Geometry
         /// <param name="args">Command line arguments.</param>
         public static void Main(string[] args)
         {
-           /*
-            Triangle triangle = new Triangle(3.0, 3.0, 3.0);
-            Square square = new Square(4.0);
-            Rectangle rectangle = new Rectangle(4.0, 120.0);
+            /*
+             Triangle triangle = new Triangle(3.0, 3.0, 3.0);
+             Square square = new Square(4.0);
+             Rectangle rectangle = new Rectangle(4.0, 120.0);
 
-            shapeCollection.addShape(triangle);
-            shapeCollection.addShape(square);
-            shapeCollection.addShape(rectangle);
-            */
-            
-           
+             shapeCollection.addShape(triangle);
+             shapeCollection.addShape(square);
+             shapeCollection.addShape(rectangle);
+             */
+
+
 
             bool isRunning = true;
 
@@ -85,10 +85,25 @@ namespace Codecool.Geometry
         }
         private static void showFormulas()
         {
-            switch(chooseShape())
+            switch (chooseShape())
             {
                 case 1:
-                    Console.WriteLine(String.Format("Circle area formula: {0}, Circle perimeter formula: {1}",Circle.AreaFormula,Circle.PerimeterFormula));
+                    Console.WriteLine(String.Format("Circle area formula: {0}, Circle perimeter formula: {1}", Circle.AreaFormula, Circle.PerimeterFormula));
+                    break;
+                case 2:
+                    Console.WriteLine(String.Format("Triangle area formula: {0}, Triangle perimeter formula: {1}", Triangle.AreaFormula, Triangle.PerimeterFormula));
+                    break;
+                case 3:
+                    Console.WriteLine(String.Format("EquilateralTriangle area formula: {0}, EquilateralTriangle perimeter formula: {1}", EquilateralTriangle.AreaFormula, EquilateralTriangle.PerimeterFormula));
+                    break;
+                case 4:
+                    Console.WriteLine(String.Format("Regular Pentagon area formula: {0}, RegularPentagon perimeter formula: {1}", RegularPentagon.AreaFormula, RegularPentagon.PerimeterFormula));
+                    break;
+                case 5:
+                    Console.WriteLine(String.Format("Square area formula: {0}, Square perimeter formula: {1}", Square.AreaFormula, Square.PerimeterFormula));
+                    break;
+                case 6:
+                    Console.WriteLine(String.Format("Rectangle area formula: {0}, Rectangle perimeter formula: {1}", Rectangle.AreaFormula, Rectangle.PerimeterFormula));
                     break;
             }
         }
@@ -99,13 +114,65 @@ namespace Codecool.Geometry
                 case 1:
                     shapeCollection.addShape(createCircle());
                     break;
+                case 2:
+                    shapeCollection.addShape(createTriangle());
+                    break;
+                case 3:
+                    shapeCollection.addShape(equilateralTriangle());
+                    break;
+                case 4:
+                    shapeCollection.addShape(regularPentagon());
+                    break;
+                case 5:
+                    shapeCollection.addShape(square());
+                    break;
+                case 6:
+                    shapeCollection.addShape(rectangle());
+                    break;
             }
         }
         private static Circle createCircle()
         {
-            Console.WriteLine("Podaj długość promienia r:");
+            Console.WriteLine("Set value: r\n");
             double r = Double.Parse(Console.ReadLine());
             return new Circle(r);
+        }
+        private static Triangle createTriangle()
+        {
+            Console.WriteLine("Set value: a\n");
+            double a = Double.Parse(Console.ReadLine());
+            Console.WriteLine("\nSet value: b\n");
+            double b = Double.Parse(Console.ReadLine());
+            Console.WriteLine("\nSet value: c\n");
+            double c = Double.Parse(Console.ReadLine());
+            return new Triangle(a, b, c);
+        }
+        private static EquilateralTriangle equilateralTriangle()
+        {
+            Console.WriteLine("Set value: a\n");
+            double a = Double.Parse(Console.ReadLine());
+            return new EquilateralTriangle(a);
+        }
+        private static RegularPentagon regularPentagon()
+        {
+            Console.WriteLine("Set value: a\n");
+            double a = Double.Parse(Console.ReadLine());
+            return new RegularPentagon(a);
+        }
+
+        private static Square square()
+        {
+            Console.WriteLine("Set value: a\n");
+            double a = Double.Parse(Console.ReadLine());
+            return new Square(a);
+    }
+        private static Rectangle rectangle()
+        {
+            Console.WriteLine("Set value: a\n");
+            double a = Double.Parse(Console.ReadLine());
+            Console.WriteLine("\nSet value: b\n");
+            double b = Double.Parse(Console.ReadLine());
+            return new Rectangle(a, b);
         }
 
     }
