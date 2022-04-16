@@ -1,42 +1,57 @@
 @startuml
+class Program
+{
++main()
++string chooseShape()
++string showFormulas()
++createCircle()
++createTriangle()
++createEquilateralTriangle()
++createRegularPentagon()
++createSquare()
++createRectangle()
+}
 class Shape{
  +double Area()
  +double Perimeter()
- +string AreaFormula()
- +string PerimeterFormula()
+ +string AreaFormula
+ +string PerimeterFormula
+ +string ToString
 }
 class Circle{
  -double r
  +double Area()
  +double Perimeter()
- +string AreaFormula()
- +string PerimeterFormula()
+ +string AreaFormula
+ +string PerimeterFormula
+ +string ToString()
 }
 class EquilateralTriangle{
- -double a
- -double h
- +string AreaFormula()
- +string PerimeterFormula()
+ +string AreaFormula
+ +string PerimeterFormula
+ +string ToString()
 }
 class Rectangle{
  -double a
  #double b
  +double Area()
  +double Perimeter()
- +string AreaFormula()
- +string PerimeterFormula()
+ +string AreaFormula
+ +string PerimeterFormula
+ +string ToString()
 }
 class RegularPentagon{
  -double a
  +double Area()
  +double Perimeter()
- +string AreaFormula()
- +string PerimeterFormula()
+ +string AreaFormula
+ +string PerimeterFormula
+ +string ToString()
 }
 class Square{
- -double a
- +string AreaFormula()
- +string PerimeterFormula()
+ +string AreaFormula
+ +string PerimeterFormula
+ +string ToString()
 }
 class Triangle{
  -double a
@@ -45,10 +60,20 @@ class Triangle{
  -double h
  +double Area()
  +double Perimeter()
- +string AreaFormula()
- +string PerimeterFormula()
+ +string AreaFormula
+ +string PerimeterFormula
+ +string ToString()
+}
+class ShapeCollection{
++table shapeList<>
++string addShape()
++string getLargestShapeByPerimeter()
++string getLargestShapeByArea()
++string getShapesTable()
 }
 
+ShapeCollection *-- Shape
+Program *-- ShapeCollection
 Shape <|-- Circle
 Triangle <|-- EquilateralTriangle
 Shape <|-- Rectangle
