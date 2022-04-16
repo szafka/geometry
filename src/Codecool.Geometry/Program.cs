@@ -118,16 +118,16 @@ namespace Codecool.Geometry
                     shapeCollection.addShape(createTriangle());
                     break;
                 case 3:
-                    shapeCollection.addShape(equilateralTriangle());
+                    shapeCollection.addShape(createEequilateralTriangle());
                     break;
                 case 4:
-                    shapeCollection.addShape(regularPentagon());
+                    shapeCollection.addShape(createRegularPentagon());
                     break;
                 case 5:
-                    shapeCollection.addShape(square());
+                    shapeCollection.addShape(createSquare());
                     break;
                 case 6:
-                    shapeCollection.addShape(rectangle());
+                    shapeCollection.addShape(createRectangle());
                     break;
             }
         }
@@ -147,26 +147,26 @@ namespace Codecool.Geometry
             double c = Double.Parse(Console.ReadLine());
             return new Triangle(a, b, c);
         }
-        private static EquilateralTriangle equilateralTriangle()
+        private static EquilateralTriangle createEequilateralTriangle()
         {
             Console.WriteLine("Set value: a\n");
             double a = Double.Parse(Console.ReadLine());
             return new EquilateralTriangle(a);
         }
-        private static RegularPentagon regularPentagon()
+        private static RegularPentagon createRegularPentagon()
         {
             Console.WriteLine("Set value: a\n");
             double a = Double.Parse(Console.ReadLine());
             return new RegularPentagon(a);
         }
 
-        private static Square square()
+        private static Square createSquare()
         {
             Console.WriteLine("Set value: a\n");
             double a = Double.Parse(Console.ReadLine());
             return new Square(a);
     }
-        private static Rectangle rectangle()
+        private static Rectangle createRectangle()
         {
             Console.WriteLine("Set value: a\n");
             double a = Double.Parse(Console.ReadLine());

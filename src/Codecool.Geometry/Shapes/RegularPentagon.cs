@@ -7,7 +7,7 @@ namespace Codecool.Geometry.Shapes
     /// </summary>
     public class RegularPentagon : Shape
     {
-        protected readonly double a;
+        private readonly double a;
 
         public RegularPentagon(double a)
         {
