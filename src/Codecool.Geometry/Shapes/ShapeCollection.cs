@@ -58,7 +58,12 @@ namespace Codecool.Geometry.Shapes
                 table += "| ---| ---------------------| ----------------------------------------| -----------| ----------| -----------| ------------------------------| \n";
                 table = table + String.Format("|{0,4}|{1,22}|{2,41}|{3,12:#.000}|{4,11}|{5,12:#.000}|{6,31}|\n",
                     i++,
-                    shape.GetType().Name, shape.ToString(), shape.Perimeter, shape.GetType().GetProperty("PerimeterFormula").GetValue(null,null), shape.Area, shape.GetType().GetProperty("AreaFormula").GetValue(null, null));
+                    shape.GetType().Name,
+                    shape.ToString(),
+                    shape.Perimeter,
+                    shape.GetType().GetProperty("PerimeterFormula").GetValue(null,null),
+                    shape.Area,
+                    shape.GetType().GetProperty("AreaFormula").GetValue(null, null));
             }
             table += "\\ ---| ---------------------| ----------------------------------------| -----------| ----------| -----------| ------------------------------/ \n";
             return table;
